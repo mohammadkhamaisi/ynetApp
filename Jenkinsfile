@@ -8,13 +8,13 @@ def attachments = [
 def slackResponse = slackSend(channel: "#pipeline-breaking-news", attachments: attachments)
 
 pipeline {
-    
+
     agent any
-    
+
     stages{
         stage('Clone from Github') {
             steps {
-                git branch: 'master', url:'https://github.com/AHMADSK1997/Breaking-News.git'
+                git branch: 'master', url:'https://github.com/mohammadkhamaisi/ynetApp.git'
             }
         }
         stage('Build the Code') {
